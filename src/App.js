@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import LeftUpLeaf from "./components/Leafs/UpSectionLeafs/LeftUpLeaf";
+import FragmentComponent from "./components/StyledFragment";
+import RightUpLeaf from "./components/Leafs/UpSectionLeafs/RightUpLeaf";
+import StyledHeaderComponent from "./components/Leafs/Header";
+import TopComponent from "./components/Leafs/UpSectionLeafs/TopSection";
+import BottomComponent from "./components/Leafs/BottomSectionLeafs/BottomSection";
+import LeftBottomLeaf from "./components/Leafs/BottomSectionLeafs/LeftBottomLeaf";
+import RightBottomLeaf from "./components/Leafs/BottomSectionLeafs/RightBottomLeaf";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FragmentComponent className="App">
+      <TopComponent>
+        <LeftUpLeaf>ŽEMAITIJA</LeftUpLeaf>
+        <RightUpLeaf>AUKŠTAITIJA</RightUpLeaf>
+      </TopComponent>
+      <StyledHeaderComponent>
+        Prašome pasirinkti Jus dominančią apskritį....
+      </StyledHeaderComponent>
+      <BottomComponent>
+        <LeftBottomLeaf>SUVALKIJA</LeftBottomLeaf>
+        <RightBottomLeaf>DZŪKIJA</RightBottomLeaf>
+      </BottomComponent>
+    </FragmentComponent>
   );
 }
 
